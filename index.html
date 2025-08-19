@@ -1,94 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Adel - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ali — Data Engineer Portfolio</title>
+  <meta name="description" content="Data Engineering portfolio: ETL, Warehousing, Pipelines, and Dashboards" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      line-height: 1.6;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    section {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 { color: #2c3e50; }
-    .project {
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
+    html { scroll-behavior: smooth; }
+    .gradient { background-image: radial-gradient(40rem 20rem at 0% 0%, rgba(59,130,246,.15), transparent 60%), radial-gradient(40rem 20rem at 100% 0%, rgba(16,185,129,.15), transparent 60%); }
   </style>
 </head>
-<body>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="font-extrabold tracking-tight text-xl">Ali<span class="text-indigo-600">.dev</span></a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#skills" class="hover:text-indigo-600">Skills</a>
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+      <a href="#contact" class="inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-semibold bg-indigo-600 text-white shadow hover:shadow-md">Hire me</a>
+    </div>
+  </header>
 
-<header>
-  <h1>Ali Adel</h1>
-  <p>Data Engineer | Data Analyst</p>
-</header>
+  <!-- Hero -->
+  <section class="gradient border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          Data Engineer building <span class="text-indigo-600">reliable</span> data platforms
+        </h1>
+        <p class="mt-4 text-lg text-slate-600">I design warehouses, ETL/ELT pipelines, and analytics stacks with Python, SQL, Airflow, dbt, and cloud.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#projects" class="rounded-2xl bg-slate-900 text-white px-5 py-3 font-semibold">See projects</a>
+          <a href="#contact" class="rounded-2xl border border-slate-300 px-5 py-3 font-semibold">Get in touch</a>
+        </div>
+      </div>
+      <div class="md:justify-self-end">
+        <div class="relative">
+          <div class="absolute -inset-1 rounded-3xl blur-xl bg-indigo-500/20"></div>
+          <div class="relative rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div class="p-4 rounded-xl bg-slate-50">
+                <div class="text-slate-500">Pipelines</div>
+                <div class="text-2xl font-bold">+50</div>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-50">
+                <div class="text-slate-500">Datasets</div>
+                <div class="text-2xl font-bold">1TB+</div>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-50">
+                <div class="text-slate-500">Dashboards</div>
+                <div class="text-2xl font-bold">24</div>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-50">
+                <div class="text-slate-500">Uptime</div>
+                <div class="text-2xl font-bold">99.9%</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600">Focused on reliability, cost-efficiency, and clean modeling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I'm a Data Engineer passionate about building data platforms, pipelines, and analytics solutions that transform raw data into powerful insights.
-  </p>
-</section>
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex items-end justify-between">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Featured projects</h2>
+      <a href="#contact" class="text-indigo-600 font-semibold">Need something similar?</a>
+    </div>
+    <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Card -->
+      <article class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="p-5">
+          <h3 class="font-bold text-lg">Photo App Data Warehouse</h3>
+          <p class="mt-2 text-slate-600">Star schema on Snowflake + dbt, ingest via Airbyte, BI in Metabase. Cut query cost 35%.</p>
+          <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
+            <li>Snowflake, dbt</li>
+            <li>Airbyte, Airflow</li>
+            <li>Metabase</li>
+          </ul>
+        </div>
+        <div class="px-5 pb-5 flex gap-3">
+          <a class="text-sm font-semibold px-3 py-2 rounded-xl bg-slate-100" href="#">Live</a>
+          <a class="text-sm font-semibold px-3 py-2 rounded-xl border border-slate-200" href="#">Source</a>
+        </div>
+      </article>
+      <article class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="p-5">
+          <h3 class="font-bold text-lg">Streaming Ingest (Kafka → BigQuery)</h3>
+          <p class="mt-2 text-slate-600">Near‑real‑time events pipeline with schema registry and dead‑letter topics.</p>
+          <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
+            <li>Kafka, Kafka Connect</li>
+            <li>GCP (Pub/Sub, Dataflow)</li>
+            <li>BigQuery</li>
+          </ul>
+        </div>
+        <div class="px-5 pb-5 flex gap-3">
+          <a class="text-sm font-semibold px-3 py-2 rounded-xl bg-slate-100" href="#">Case study</a>
+          <a class="text-sm font-semibold px-3 py-2 rounded-xl border border-slate-200" href="#">Source</a>
+        </div>
+      </article>
+      <article class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="p-5">
+          <h3 class="font-bold text-lg">Open Data Scraper</h3>
+          <p class="mt-2 text-slate-600">BeautifulSoup + Selenium crawler into DuckDB; published via static CSVs and charts.</p>
+          <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
+            <li>Python (BS4, Selenium)</li>
+            <li>DuckDB, Parquet</li>
+            <li>Netlify static site</li>
+          </ul>
+        </div>
+        <div class="px-5 pb-5 flex gap-3">
+          <a class="text-sm font-semibold px-3 py-2 rounded-xl bg-slate-100" href="#">Demo</a>
+          <a class="text-sm font-semibold px-3 py-2 rounded-xl border border-slate-200" href="#">Source</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Python, SQL</li>
-    <li>ETL, Data Pipelines</li>
-    <li>Docker, Terraform</li>
-    <li>Cloud (GCP, AWS)</li>
-  </ul>
-</section>
+  <!-- Skills -->
+  <section id="skills" class="bg-slate-50 border-y border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Skills</h2>
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        <ul class="p-6 rounded-2xl bg-white border border-slate-200">
+          <li class="font-semibold mb-2">Data Warehousing</li>
+          <li class="text-slate-600">Star/Snowflake, Dimensional Modeling, Partitioning</li>
+        </ul>
+        <ul class="p-6 rounded-2xl bg-white border border-slate-200">
+          <li class="font-semibold mb-2">Pipelines</li>
+          <li class="text-slate-600">Airflow, Kafka, Spark, dbt, Terraform</li>
+        </ul>
+        <ul class="p-6 rounded-2xl bg-white border border-slate-200">
+          <li class="font-semibold mb-2">Cloud & Storage</li>
+          <li class="text-slate-600">GCP, AWS, BigQuery, S3, Parquet, Delta</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project">
-    <h3>Data Pipeline with Airflow</h3>
-    <p>Built an automated ETL pipeline using Apache Airflow, extracting data from APIs and storing it in BigQuery.</p>
-    <a href="https://github.com/aliadel01/project-link">View on GitHub</a>
-  </div>
-  <div class="project">
-    <h3>Sales Dashboard</h3>
-    <p>Created an interactive dashboard with Python and Tableau to visualize company sales performance.</p>
-    <a href="https://github.com/aliadel01/project-link">View on GitHub</a>
-  </div>
-</section>
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold">About me</h2>
+        <p class="mt-4 text-slate-700 leading-relaxed">I’m Ali, a data engineer who loves building robust, observable data systems. I care about high‑quality schemas, efficient storage, and great developer experience.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
+        <h3 class="font-bold">Highlights</h3>
+        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+          <li>Designed warehouse that cut query cost by 35%</li>
+          <li>Built CDC pipeline from Postgres → BigQuery</li>
+          <li>Set up observability: data tests, SLAs, alerts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:aliadel01@gmail.com">aliadel01@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/aliadel01">linkedin.com/in/aliadel01</a></p>
-  <p>GitHub: <a href="https://github.com/aliadel01">github.com/aliadel01</a></p>
-</section>
+  <!-- Contact (Netlify Forms ready) -->
+  <section id="contact" class="bg-slate-900 text-white">
+    <div class="max-w-3xl mx-auto px-4 py-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
+      <p class="mt-2 text-slate-300">Tell me about your project. I’ll reply within 24 hours.</p>
+      <form name="contact" method="POST" data-netlify="true" class="mt-6 grid gap-4">
+        <input type="hidden" name="form-name" value="contact">
+        <label class="grid">
+          <span class="text-sm text-slate-300">Your name</span>
+          <input class="mt-1 rounded-xl bg-white/10 border border-white/20 px-4 py-3 focus:outline-none" type="text" name="name" required />
+        </label>
+        <label class="grid">
+          <span class="text-sm text-slate-300">Email</span>
+          <input class="mt-1 rounded-xl bg-white/10 border border-white/20 px-4 py-3 focus:outline-none" type="email" name="email" required />
+        </label>
+        <label class="grid">
+          <span class="text-sm text-slate-300">Message</span>
+          <textarea class="mt-1 rounded-xl bg-white/10 border border-white/20 px-4 py-3 h-32 focus:outline-none" name="message" required></textarea>
+        </label>
+        <button class="rounded-2xl bg-indigo-500 px-6 py-3 font-semibold hover:bg-indigo-400 w-max" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Ali Adel</p>
-</footer>
+  <footer class="text-center text-sm text-slate-500 py-8">
+    © <span id="year"></span> Ali — Data Engineer
+  </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
