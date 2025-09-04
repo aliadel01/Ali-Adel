@@ -280,9 +280,12 @@
           <div>
             <h2 class="text-3xl md:text-4xl font-extrabold">About me</h2>
             <p class="mt-4 text-slate-700 leading-relaxed">
-              I’m Ali, a data engineer who loves building robust, observable
-              data systems. I care about high-quality schemas, efficient
-              storage, and great developer experience.
+              I’m Ali, my unique strength lies in bridging the gap between
+              engineering and analytics. I not only design and optimize the
+              systems that handle data, but also translate that data into clear
+              insights that empower smarter decisions. This dual skill set
+              enables me to create end-to-end data solutions—from ingestion to
+              interpretation—that deliver real impact.
             </p>
           </div>
 
@@ -309,19 +312,29 @@
     </section>
 
     <!-- Contact (Netlify Forms ready) -->
+
     <section id="contact" class="bg-slate-900 text-white">
       <div class="max-w-3xl mx-auto px-4 py-16">
         <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
         <p class="mt-2 text-slate-300">
           Tell me about your project. I’ll reply within 24 hours.
         </p>
+        <p class="mt-4 text-slate-300">
+          Or email me directly at
+          <a
+            href="mailto:aliadel.engineer@gmail.com"
+            class="text-indigo-400 underline"
+          >
+            aliadel.engineer@gmail.com
+          </a>
+        </p>
+
         <form
-          name="contact"
+          action="mailto:aliadel.engineer@gmail.com"
           method="POST"
-          data-netlify="true"
+          enctype="text/plain"
           class="mt-6 grid gap-4"
         >
-          <input type="hidden" name="form-name" value="contact" />
           <label class="grid">
             <span class="text-sm text-slate-300">Your name</span>
             <input
@@ -359,7 +372,7 @@
     </section>
 
     <footer class="text-center text-sm text-slate-500 py-8">
-      © <span id="year"></span> Ali.engineer
+      © <span id="year"></span> Ali Adel — Data Engineer
     </footer>
 
     <script>
