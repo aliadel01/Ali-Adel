@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,6 +15,12 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Enable dark mode in Tailwind
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
     <style>
       html {
         scroll-behavior: smooth;
@@ -33,10 +39,12 @@
       }
     </style>
   </head>
-  <body class="bg-white text-slate-800 antialiased">
+  <body
+    class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-200 antialiased"
+  >
     <!-- Header -->
     <header
-      class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-100"
+      class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-100 dark:border-slate-800"
     >
       <div
         class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"
@@ -54,8 +62,15 @@
           <a href="#contact" class="hover:text-indigo-600">Contact</a>
         </nav>
 
-        <!-- Actions (Resume + Socials) -->
+        <!-- Actions -->
         <div class="flex items-center gap-3">
+          <!-- Theme Toggle Button -->
+          <button
+            id="theme-toggle"
+            class="p-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 shadow hover:shadow-md"
+          >
+            🌙
+          </button>
           <a
             href="https://drive.google.com/file/d/1lgcOAnXMULWHmk0hSmoPj6m9LpSg4Hdx/view"
             target="_blank"
@@ -66,14 +81,14 @@
           <a
             href="https://github.com/aliadel01"
             target="_blank"
-            class="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium border border-slate-200 hover:bg-slate-100"
+            class="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800"
           >
             GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/ali-adel-8942aa346/"
             target="_blank"
-            class="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium border border-slate-200 hover:bg-slate-100"
+            class="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800"
           >
             LinkedIn
           </a>
@@ -82,7 +97,7 @@
     </header>
 
     <!-- Hero -->
-    <section class="gradient border-b border-slate-100">
+    <section class="gradient border-b border-slate-100 dark:border-slate-800">
       <div
         class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center"
       >
@@ -93,19 +108,19 @@
             Data Engineer building
             <span class="text-indigo-600">reliable</span> data platforms
           </h1>
-          <p class="mt-4 text-lg text-slate-600">
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
             I design warehouses, ETL/ELT pipelines, and analytics stacks with
             Python, SQL, Airflow, dbt, and cloud.
           </p>
           <div class="mt-6 flex gap-3">
             <a
               href="#projects"
-              class="rounded-2xl bg-slate-900 text-white px-5 py-3 font-semibold"
+              class="rounded-2xl bg-slate-900 text-white px-5 py-3 font-semibold dark:bg-slate-100 dark:text-slate-900"
               >See projects</a
             >
             <a
               href="#contact"
-              class="rounded-2xl border border-slate-300 px-5 py-3 font-semibold"
+              class="rounded-2xl border border-slate-300 dark:border-slate-700 px-5 py-3 font-semibold bg-white text-slate-900 dark:bg-slate-900 dark:text-white"
               >Get in touch</a
             >
           </div>
@@ -116,27 +131,31 @@
               class="absolute -inset-1 rounded-3xl blur-xl bg-indigo-500/20"
             ></div>
             <div
-              class="relative rounded-3xl border border-slate-200 bg-white p-6 shadow-lg"
+              class="relative rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-lg"
             >
               <div class="grid grid-cols-2 gap-4 text-sm">
-                <div class="p-4 rounded-xl bg-slate-50">
-                  <div class="text-slate-500">Pipelines</div>
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50">
+                  <div class="text-slate-500 dark:text-slate-400">
+                    Pipelines
+                  </div>
                   <div class="text-2xl font-bold">+50</div>
                 </div>
-                <div class="p-4 rounded-xl bg-slate-50">
-                  <div class="text-slate-500">Datasets</div>
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50">
+                  <div class="text-slate-500 dark:text-slate-400">Datasets</div>
                   <div class="text-2xl font-bold">1TB+</div>
                 </div>
-                <div class="p-4 rounded-xl bg-slate-50">
-                  <div class="text-slate-500">Dashboards</div>
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50">
+                  <div class="text-slate-500 dark:text-slate-400">
+                    Dashboards
+                  </div>
                   <div class="text-2xl font-bold">24</div>
                 </div>
-                <div class="p-4 rounded-xl bg-slate-50">
-                  <div class="text-slate-500">Uptime</div>
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50">
+                  <div class="text-slate-500 dark:text-slate-400">Uptime</div>
                   <div class="text-2xl font-bold">99.9%</div>
                 </div>
               </div>
-              <p class="mt-4 text-slate-600">
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
                 Focused on reliability, cost-efficiency, and clean modeling.
               </p>
             </div>
@@ -156,114 +175,93 @@
       <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <!-- Card -->
         <article
-          class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
+          class="rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-lg transition-shadow bg-white dark:bg-slate-800"
         >
           <div class="p-5">
-            <h3 class="font-bold text-lg">Photo App Data Warehouse</h3>
-            <p class="mt-2 text-slate-600">
-              Star schema on Snowflake + dbt, ingest via Airbyte, BI in
-              Metabase. Cut query cost 35%.
+            <h3 class="font-bold text-lg">Amazon Product Scraper</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">
+              This project scrapes detailed information about Amazon products
+              (e.g., Samsung, electronics, or any category) from Amazon.
             </p>
-            <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
-              <li>Snowflake, dbt</li>
-              <li>Airbyte, Airflow</li>
-              <li>Metabase</li>
+            <ul
+              class="mt-3 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside"
+            >
+              <li>BeautifulSoup</li>
+              <li>Selenium</li>
+              <li>Pandas</li>
             </ul>
           </div>
           <div class="px-5 pb-5 flex gap-3">
             <a
-              class="text-sm font-semibold px-3 py-2 rounded-xl bg-slate-100"
-              href="#"
-              >Live</a
-            >
-            <a
-              class="text-sm font-semibold px-3 py-2 rounded-xl border border-slate-200"
-              href="#"
-              >Source</a
+              class="text-sm font-semibold px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700"
+              href="https://github.com/aliadel01/Amazon-Product-Scraper.git"
+              >Github</a
             >
           </div>
         </article>
-        <article
-          class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
+        <!-- <article
+          class="rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-lg transition-shadow bg-white dark:bg-slate-800"
         >
           <div class="p-5">
-            <h3 class="font-bold text-lg">
-              Streaming Ingest (Kafka → BigQuery)
-            </h3>
-            <p class="mt-2 text-slate-600">
-              Near‑real‑time events pipeline with schema registry and
-              dead‑letter topics.
+            <h3 class="font-bold text-lg">Amazon Product Scraper</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">
+              This project scrapes detailed information about Amazon products
+              (e.g., Samsung, electronics, or any category) from Amazon.
             </p>
-            <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
-              <li>Kafka, Kafka Connect</li>
-              <li>GCP (Pub/Sub, Dataflow)</li>
-              <li>BigQuery</li>
+            <ul
+              class="mt-3 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside"
+            >
+              <li>BeautifulSoup</li>
+              <li>Selenium</li>
+              <li>Pandas</li>
             </ul>
           </div>
           <div class="px-5 pb-5 flex gap-3">
             <a
-              class="text-sm font-semibold px-3 py-2 rounded-xl bg-slate-100"
-              href="#"
-              >Case study</a
+              class="text-sm font-semibold px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700"
+              href="https://github.com/aliadel01/Amazon-Product-Scraper.git"
+              >Github</a
             >
             <a
-              class="text-sm font-semibold px-3 py-2 rounded-xl border border-slate-200"
+              class="text-sm font-semibold px-3 py-2 rounded-xl bg-slate-100 text-slate-900 dark:bg-transparent dark:text-slate-100 dark:border dark:border-slate-700"
               href="#"
-              >Source</a
             >
+              Case study
+            </a>
           </div>
-        </article>
-        <article
-          class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
-        >
-          <div class="p-5">
-            <h3 class="font-bold text-lg">Open Data Scraper</h3>
-            <p class="mt-2 text-slate-600">
-              BeautifulSoup + Selenium crawler into DuckDB; published via static
-              CSVs and charts.
-            </p>
-            <ul class="mt-3 text-sm text-slate-600 list-disc list-inside">
-              <li>Python (BS4, Selenium)</li>
-              <li>DuckDB, Parquet</li>
-              <li>Netlify static site</li>
-            </ul>
-          </div>
-          <div class="px-5 pb-5 flex gap-3">
-            <a
-              class="text-sm font-semibold px-3 py-2 rounded-xl bg-slate-100"
-              href="#"
-              >Demo</a
-            >
-            <a
-              class="text-sm font-semibold px-3 py-2 rounded-xl border border-slate-200"
-              href="#"
-              >Source</a
-            >
-          </div>
-        </article>
+        </article> -->
       </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="bg-slate-50 border-y border-slate-100">
+    <section
+      id="skills"
+      class="bg-slate-50 dark:bg-slate-800 border-y border-slate-100 dark:border-slate-700"
+    >
       <div class="max-w-6xl mx-auto px-4 py-16">
         <h2 class="text-3xl md:text-4xl font-extrabold">Skills</h2>
         <div class="mt-6 grid gap-4 md:grid-cols-3">
-          <ul class="p-6 rounded-2xl bg-white border border-slate-200">
+          <ul
+            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
+          >
             <li class="font-semibold mb-2">Data Warehousing</li>
-            <li class="text-slate-600">
+            <li class="text-slate-600 dark:text-slate-300">
               Star/Snowflake, Dimensional Modeling, Partitioning
             </li>
           </ul>
-          <ul class="p-6 rounded-2xl bg-white border border-slate-200">
+          <ul
+            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
+          >
             <li class="font-semibold mb-2">Pipelines</li>
-            <li class="text-slate-600">
+            <li class="text-slate-600 dark:text-slate-300">
               Airflow, Kafka, Spark, dbt, Terraform
             </li>
           </ul>
-          <ul class="p-6 rounded-2xl bg-white border border-slate-200">
+          <ul
+            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
+          >
             <li class="font-semibold mb-2">Cloud & Storage</li>
-            <li class="text-slate-600">
+            <li class="text-slate-600 dark:text-slate-300">
               GCP, AWS, BigQuery, S3, Parquet, Delta
             </li>
           </ul>
@@ -274,12 +272,10 @@
     <!-- About -->
     <section id="about" class="max-w-6xl mx-auto px-4 py-16">
       <div class="grid md:grid-cols-2 gap-8 items-start">
-        <!-- Left Column (About + Highlights stacked) -->
         <div class="space-y-8">
-          <!-- About -->
           <div>
             <h2 class="text-3xl md:text-4xl font-extrabold">About me</h2>
-            <p class="mt-4 text-slate-700 leading-relaxed">
+            <p class="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">
               I’m Ali, my unique strength lies in bridging the gap between
               engineering and analytics. I not only design and optimize the
               systems that handle data, but also translate that data into clear
@@ -288,19 +284,19 @@
               interpretation—that deliver real impact.
             </p>
           </div>
-
-          <!-- Highlights -->
-          <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
+          <div
+            class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-slate-50 dark:bg-slate-800"
+          >
             <h3 class="font-bold">Highlights</h3>
-            <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+            <ul
+              class="mt-3 space-y-2 text-slate-700 dark:text-slate-300 list-disc list-inside"
+            >
               <li>Designed warehouse that cut query cost by 35%</li>
               <li>Built CDC pipeline from Postgres → BigQuery</li>
               <li>Set up observability: data tests, SLAs, alerts</li>
             </ul>
           </div>
         </div>
-
-        <!-- Right Column (Your Image) -->
         <div class="flex justify-center">
           <img
             src="my-image.png"
@@ -311,24 +307,21 @@
       </div>
     </section>
 
-    <!-- Contact (Netlify Forms ready) -->
-
+    <!-- Contact -->
     <section id="contact" class="bg-slate-900 text-white">
       <div class="max-w-3xl mx-auto px-4 py-16 text-center">
         <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
         <p class="mt-2 text-slate-300">
           Tell me about your project. I’ll reply within 24 hours.
         </p>
-
         <div class="mt-6 space-y-4">
           <p class="text-slate-300">
             📧 Email me at:
             <a
               href="mailto:aliadel.engineer@gmail.com"
               class="text-indigo-400 underline font-semibold"
+              >aliadel.engineer@gmail.com</a
             >
-              aliadel.engineer@gmail.com
-            </a>
           </p>
           <p class="text-slate-300">
             💼 Connect on
@@ -336,19 +329,17 @@
               href="https://www.linkedin.com/in/ali-adel-8942aa346/"
               target="_blank"
               class="text-indigo-400 underline font-semibold"
+              >LinkedIn</a
             >
-              LinkedIn
-            </a>
           </p>
           <p class="text-slate-300">
             💻 See my work on
             <a
-              href="https://github.com/aliade0101"
+              href="https://github.com/aliadel01"
               target="_blank"
               class="text-indigo-400 underline font-semibold"
+              >GitHub</a
             >
-              GitHub
-            </a>
           </p>
         </div>
       </div>
@@ -358,8 +349,22 @@
       © <span id="year"></span> Ali Adel — Data Engineer
     </footer>
 
+    <!-- Scripts -->
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const themeToggle = document.getElementById("theme-toggle");
+      const html = document.documentElement;
+
+      themeToggle.addEventListener("click", () => {
+        if (html.classList.contains("dark")) {
+          html.classList.remove("dark");
+          themeToggle.textContent = "🌙";
+        } else {
+          html.classList.add("dark");
+          themeToggle.textContent = "☀️";
+        }
+      });
     </script>
   </body>
 </html>
