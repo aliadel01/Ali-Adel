@@ -56,9 +56,9 @@
 
         <!-- Navigation -->
         <nav class="hidden md:flex gap-6 text-sm font-medium">
-          <a href="#projects" class="hover:text-indigo-600">Projects</a>
-          <a href="#skills" class="hover:text-indigo-600">Skills</a>
           <a href="#about" class="hover:text-indigo-600">About</a>
+          <a href="#skills" class="hover:text-indigo-600">Skills</a>
+          <a href="#projects" class="hover:text-indigo-600">Projects</a>
           <a href="#contact" class="hover:text-indigo-600">Contact</a>
         </nav>
 
@@ -164,6 +164,163 @@
       </div>
     </section>
 
+    <!-- About -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-16">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold">About me</h2>
+            <p class="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+              I’m Ali, my unique strength lies in bridging the gap between
+              engineering and analytics. I not only design and optimize the
+              systems that handle data, but also translate that data into clear
+              insights that empower smarter decisions. This dual skill set
+              enables me to create end-to-end data solutions—from ingestion to
+              interpretation—that deliver real impact.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-slate-50 dark:bg-slate-800"
+          >
+            <h3 class="font-bold">Highlights</h3>
+            <ul
+              class="mt-3 space-y-2 text-slate-700 dark:text-slate-300 list-disc list-inside"
+            >
+              <li>Designed warehouse that cut query cost by 35%</li>
+              <li>Built CDC pipeline from Postgres → BigQuery</li>
+              <li>Set up observability: data tests, SLAs, alerts</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="my-image.png"
+            alt="Ali photo"
+            class="rounded-2xl w-72 h-72 object-cover shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+<section
+  id="education"
+  class="bg-slate-50 dark:bg-slate-800 border-y border-slate-100 dark:border-slate-700"
+>
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-extrabold">Education</h2>
+    <div class="mt-6 space-y-6">
+      <div
+        class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow"
+      >
+        <h3 class="font-bold text-xl">BS in Data Science</h3>
+        <p class="text-slate-600 dark:text-slate-300 mt-1">
+          Alexandria University — College of Computers and Data Science
+        </p>
+        <ul
+          class="mt-3 list-disc list-inside text-slate-600 dark:text-slate-300 text-sm"
+        >
+          <li>
+            Cumulative GPA: <span class="font-semibold">3.95 / 4.0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl md:text-4xl font-extrabold">Experience</h2>
+  <div class="mt-6 space-y-6">
+    <!-- Scholarship Card -->
+    <div
+      class="p-6 flex items-center justify-between gap-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow"
+    >
+      <!-- Left: Text -->
+      <div class="flex-1">
+        <h3 class="font-bold text-xl">Data Engineer Trainee</h3>
+        <p class="text-slate-600 dark:text-slate-300 mt-1">
+          Digital Egypt Pioneers Initiative (DEPI) — Ministry of Communications and Information Technology (MCIT), Egypt
+        </p>
+        <p class="text-slate-500 dark:text-slate-400 text-sm">
+          June 2025 – Dec 2025 | Alexandria, Egypt
+        </p>
+
+        <ul
+          class="mt-4 list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300 text-sm"
+        >
+          <li>
+            Selected for the prestigious <span class="font-semibold">DEPI Scholarship</span> by MCIT to specialize in <span class="font-semibold">Data Engineering</span>.
+          </li>
+          <li>
+            Completed hands-on training on cloud platforms (Azure Data Factory, Synapse, Databricks, Delta Lake, Microsoft Fabric).
+          </li>
+          <li>
+            Applied <span class="font-semibold">ETL/ELT pipelines, data warehousing, and real-time analytics</span> with SQL, Power BI, and Python.
+          </li>
+          <li>
+            Practiced modern <span class="font-semibold">MLOps workflows</span> using MLflow and Hugging Face for deployment and CI/CD.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Logo -->
+   <div class="flex-shrink-0">
+  <!-- Light mode logo -->
+  <img
+    src="mcit-logo-light.png"
+    alt="MCIT Logo"
+    class="w-28 h-28 object-contain dark:hidden"
+  />
+  <!-- Dark mode logo -->
+  <img
+    src="mcit-logo-dark.png"
+    alt="MCIT Logo"
+    class="w-28 h-28 object-contain hidden dark:block"
+  />
+</div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Skills -->
+    <section
+      id="skills"
+      class="bg-slate-50 dark:bg-slate-800 border-y border-slate-100 dark:border-slate-700"
+    >
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Skills</h2>
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <ul
+            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
+          >
+            <li class="font-semibold mb-2">Data Warehousing</li>
+            <li class="text-slate-600 dark:text-slate-300">
+              Star/Snowflake, Dimensional Modeling, Partitioning
+            </li>
+          </ul>
+          <ul
+            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
+          >
+            <li class="font-semibold mb-2">Pipelines</li>
+            <li class="text-slate-600 dark:text-slate-300">
+              Airflow, Kafka, Spark, dbt, Terraform
+            </li>
+          </ul>
+          <ul
+            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
+          >
+            <li class="font-semibold mb-2">Cloud & Storage</li>
+            <li class="text-slate-600 dark:text-slate-300">
+              GCP, AWS, BigQuery, S3, Parquet, Delta
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects -->
     <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
       <div class="flex items-end justify-between">
@@ -230,80 +387,6 @@
             </a>
           </div>
         </article> -->
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section
-      id="skills"
-      class="bg-slate-50 dark:bg-slate-800 border-y border-slate-100 dark:border-slate-700"
-    >
-      <div class="max-w-6xl mx-auto px-4 py-16">
-        <h2 class="text-3xl md:text-4xl font-extrabold">Skills</h2>
-        <div class="mt-6 grid gap-4 md:grid-cols-3">
-          <ul
-            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
-          >
-            <li class="font-semibold mb-2">Data Warehousing</li>
-            <li class="text-slate-600 dark:text-slate-300">
-              Star/Snowflake, Dimensional Modeling, Partitioning
-            </li>
-          </ul>
-          <ul
-            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
-          >
-            <li class="font-semibold mb-2">Pipelines</li>
-            <li class="text-slate-600 dark:text-slate-300">
-              Airflow, Kafka, Spark, dbt, Terraform
-            </li>
-          </ul>
-          <ul
-            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
-          >
-            <li class="font-semibold mb-2">Cloud & Storage</li>
-            <li class="text-slate-600 dark:text-slate-300">
-              GCP, AWS, BigQuery, S3, Parquet, Delta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="max-w-6xl mx-auto px-4 py-16">
-      <div class="grid md:grid-cols-2 gap-8 items-start">
-        <div class="space-y-8">
-          <div>
-            <h2 class="text-3xl md:text-4xl font-extrabold">About me</h2>
-            <p class="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-              I’m Ali, my unique strength lies in bridging the gap between
-              engineering and analytics. I not only design and optimize the
-              systems that handle data, but also translate that data into clear
-              insights that empower smarter decisions. This dual skill set
-              enables me to create end-to-end data solutions—from ingestion to
-              interpretation—that deliver real impact.
-            </p>
-          </div>
-          <div
-            class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-slate-50 dark:bg-slate-800"
-          >
-            <h3 class="font-bold">Highlights</h3>
-            <ul
-              class="mt-3 space-y-2 text-slate-700 dark:text-slate-300 list-disc list-inside"
-            >
-              <li>Designed warehouse that cut query cost by 35%</li>
-              <li>Built CDC pipeline from Postgres → BigQuery</li>
-              <li>Set up observability: data tests, SLAs, alerts</li>
-            </ul>
-          </div>
-        </div>
-        <div class="flex justify-center">
-          <img
-            src="my-image.png"
-            alt="Ali photo"
-            class="rounded-2xl w-72 h-72 object-cover shadow-lg"
-          />
-        </div>
       </div>
     </section>
 
